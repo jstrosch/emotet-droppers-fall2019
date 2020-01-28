@@ -64,7 +64,7 @@ def main(argv):
     options, args = setup_args() 
 
     for file_name in os.listdir(options.directory):
-        extract_downloader_links(file_name)
+        extract_downloader_links(options.directory + file_name)
 
     print("[*] Found " + str(len(dl_urls)) + " unique URIs")
  
